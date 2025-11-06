@@ -3,7 +3,7 @@ print ("Tere, maailm!")
 
 #Harjutus 1.2
 aasta = 2020
-liblikas = "teelehe-mosambiikliblikas"
+liblikas = "teelehe-mosaiikliblikas"
 lause_keskosa = ". aasta liblikas on "
 lause = str(aasta) + lause_keskosa + liblikas
 print(lause)
@@ -35,4 +35,18 @@ print("Inimeste arv:", inimesi)
 print("Kohtade arv:", kohad)
 print("Busse vaja:", busside_arv)
 print("Viimases bussis inimesi:", viimases_bussis)
+
+istekohti = 40
+reisijad = 40
+
+
+taisbuss = reisijad // istekohti
+jaak = reisijad % istekohti
+
+if jaak > 0:
+    lisabuss = 1
+else:
+    lisabuss = 0
+
+print("Busside arv:", taisbuss + lisabuss)
 
