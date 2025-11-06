@@ -19,34 +19,29 @@ else:
     print("Need on alumised pilved.")
     
 #Harjutus 1.4
-inimesi = int(input("Sisesta inimeste arv: "))
-kohad = int(input("Sisesta ühe bussi kohtade arv: "))
+    
+Reisijaid = int(input("Sisesta reisijate arv: "))
+Istekohti = int(input("Sisesta ühe bussi istekohtade arv:"))
 
-busside_arv = inimesi // kohad
-ulejaanud = inimesi % kohad
-
-if ulejaanud > 0:
-    busside_arv += 1
-    viimases_bussis = ulejaanud
-else:
-    viimases_bussis = kohad
-
-print("Inimeste arv:", inimesi)
-print("Kohtade arv:", kohad)
-print("Busse vaja:", busside_arv)
-print("Viimases bussis inimesi:", viimases_bussis)
+busside_arv = Reisijaid / Istekohti
+jaak = Reisijaid - Istekohti
+    
+    
 
 istekohti = 40
-reisijad = 40
+Reisijad = 40
+
+busside_arv = Reisijad // istekohti
+
+lisabuss = Reisijad % istekohti
 
 
-taisbuss = reisijad // istekohti
-jaak = reisijad % istekohti
 
 if jaak > 0:
     lisabuss = 1
 else:
     lisabuss = 0
 
-print("Busside arv:", taisbuss + lisabuss)
+print("Busside arv:", busside_arv + lisabuss)
+
 
